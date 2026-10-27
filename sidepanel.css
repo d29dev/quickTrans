@@ -1,0 +1,300 @@
+/* ================================
+   Material Design 3 Theme Variables
+   ================================ */
+:root {
+  --md-sys-color-primary: #6750a4;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #eaddff;
+  --md-sys-color-on-primary-container: #21005d;
+  --md-sys-color-surface: #fef7ff;
+  --md-sys-color-on-surface: #1d1b20;
+  --md-sys-color-surface-variant: #e7e0ec;
+  --md-sys-color-on-surface-variant: #49454f;
+  --md-sys-color-outline: #79747e;
+  --md-sys-color-outline-variant: #cac4d0;
+  
+  --md-elevation-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+  --md-shape-corner-small: 8px;
+  --md-shape-corner-medium: 12px;
+  --md-shape-corner-large: 16px;
+  --md-shape-corner-full: 9999px;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Material Outlined Buttons */
+header button {
+  background: transparent;
+  outline: none;
+  border: 1px solid var(--md-sys-color-outline);
+  color: var(--md-sys-color-primary);
+  flex: 1;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: var(--md-shape-corner-full);
+  min-width: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+header button:hover {
+  background-color: rgba(103, 80, 164, 0.08);
+  border-color: var(--md-sys-color-primary);
+}
+
+header button:active {
+  background-color: rgba(103, 80, 164, 0.12);
+}
+
+
+/* Main Container */
+main {
+  padding: 0 16px 16px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Material Textarea Fields */
+.field-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-container label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface-variant);
+  margin-left: 4px;
+}
+
+main textarea {
+  border-radius: var(--md-shape-corner-medium);
+  border: 1px solid var(--md-sys-color-outline);
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  padding: 12px 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  height: 140px;
+  resize: vertical;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+main textarea:focus {
+  border: 2px solid var(--md-sys-color-primary);
+  padding: 11px 15px; /* Adjust padding for 2px border */
+}
+
+main textarea#output {
+  background-color: var(--md-sys-color-surface-variant);
+  border-color: transparent;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Material List Component */
+#list {
+  list-style: none;
+  background-color: var(--md-sys-color-surface);
+  border-radius: var(--md-shape-corner-large);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  overflow: hidden;
+}
+
+#list button {
+  background: 0;
+  width: 100%;
+  border: 0;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#list button:last-child {
+  border-bottom: none;
+}
+
+#list button:hover {
+  background-color: rgba(103, 80, 164, 0.08);
+}
+
+#list button .icon {
+  font-size: 0.8rem;
+  color: var(--md-sys-color-outline);
+}
+
+/* Footer */
+footer {
+  padding: 16px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface-variant);
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+  background-color: var(--md-sys-color-surface-variant);
+}
+
+.dark,
+[data-theme="dark"] {
+  --md-sys-color-primary: #d0bcff;
+  --md-sys-color-on-primary-container: #eaddff;
+  --md-sys-color-primary-container: #4f378b;
+  --md-sys-color-surface: #141218;
+  --md-sys-color-on-surface: #e6e1e5;
+  --md-sys-color-surface-variant: #2b2930;
+  --md-sys-color-on-surface-variant: #cac4d0;
+  --md-sys-color-outline-variant: #49454f;
+}
+
+/* List Accordion Wrapper */
+.dictionary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.word-item {
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--md-sys-color-surface);
+  transition: background-color 0.2s ease;
+}
+
+.word-header {
+  padding: 14px 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none; /* Bỏ icon tam giác mặc định của <summary> */
+  color: var(--md-sys-color-on-surface);
+}
+
+.word-header::-webkit-details-marker {
+  display: none;
+}
+
+.word-header .icon {
+  font-size: 0.85rem;
+  color: var(--md-sys-color-on-surface-variant);
+  transition: transform 0.2s ease;
+}
+
+/* Rotate Chevron Icon on Open */
+.word-item[open] .word-header .icon {
+  transform: rotate(90deg);
+}
+
+.word-content {
+  padding: 16px;
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+  background-color: var(--md-sys-color-surface-variant);
+}
+
+.word-content h2 {
+  font-size: 1.5rem;
+  color: var(--md-sys-color-primary);
+  margin-bottom: 8px;
+}
+
+.pronunciation-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.pronunciation {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.part-of-speech {
+  margin-top: 12px;
+}
+
+.part-of-speech h3 {
+  font-size: 0.9rem;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  margin-bottom: 8px;
+}
+
+.meaning-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: var(--md-sys-color-on-surface);
+}
+
+.meaning {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.example-list {
+  list-style: none;
+  padding-left: 12px;
+  margin-top: 4px;
+  border-left: 2px solid var(--md-sys-color-outline-variant);
+}
+
+.example-list li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+  font-size: 0.875rem;
+}
+
+.example-list .en {
+  font-weight: 500;
+  color: var(--md-sys-color-primary);
+}
+
+.example-list .vi {
+  color: var(--md-sys-color-on-surface-variant);
+}

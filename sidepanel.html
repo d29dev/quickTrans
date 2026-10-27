@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Translate</title>
+
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chevron_right" />
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <header>
+      <button class="btn-outlined">
+        <span>English To Vietnamese</span>
+        <span class="material-symbols-outlined"> translate </span>
+      </button>
+      <button class="btn-outlined" id="dark-mode-btn">
+        <span>Dark Mode</span>
+        <span class="material-symbols-outlined"> contrast </span>
+      </button>
+    </header>
+
+    <main>
+      <div class="field-container">
+        <label for="input">Source Text</label>
+        <textarea
+          name=""
+          id="input"
+          placeholder="Type or paste text here..."
+        ></textarea>
+      </div>
+
+      <div class="field-container">
+        <label for="output">Translation</label>
+        <textarea
+          name=""
+          id="output"
+          readonly
+          placeholder="Translation will appear here..."
+        ></textarea>
+      </div>
+
+      <div id="list"></div>
+    </main>
+
+    <footer>Quick Translate</footer>
+    <script src="sidepanel.js" type="module"></script>
+  </body>
+</html>
