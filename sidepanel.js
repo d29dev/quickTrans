@@ -72,7 +72,7 @@ async function handleInput(value) {
     const details = createElement("details", "", "word-item");
 
     // Từ đầu tiên mở mặc định (mở accordion đầu tiên)
-    // if (index === 0) details.open = true;
+    if (index === 0) details.open = true;
 
     // --- Header Accordion (<summary>) ---
     const summary = createElement("summary", "", "word-header");

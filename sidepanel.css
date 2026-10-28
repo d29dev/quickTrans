@@ -177,9 +177,9 @@ footer {
   --md-sys-color-primary: #d0bcff;
   --md-sys-color-on-primary-container: #eaddff;
   --md-sys-color-primary-container: #4f378b;
-  --md-sys-color-surface: #141218;
+  --md-sys-color-surface: #2a2a2a;
   --md-sys-color-on-surface: #e6e1e5;
-  --md-sys-color-surface-variant: #2b2930;
+  --md-sys-color-surface-variant: #3c3c3c;
   --md-sys-color-on-surface-variant: #cac4d0;
   --md-sys-color-outline-variant: #49454f;
 }
@@ -297,4 +297,31 @@ footer {
 
 .example-list .vi {
   color: var(--md-sys-color-on-surface-variant);
+}
+
+/* For WebKit-based browsers (Chrome, Edge, Safari) */
+.body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; /* For horizontal scrollbars */
+}
+
+.body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light grey track */
+  border-radius: 4px;
+}
+
+.body::-webkit-scrollbar-thumb {
+  background: #c1c1c1; /* Muted thumb color */
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.body::-webkit-scrollbar-thumb:hover {
+  background: #9e9e9e; /* Darker on hover, typical of Material UI */
+}
+
+/* For Firefox */
+.body {
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1; /* thumb and track */
 }
